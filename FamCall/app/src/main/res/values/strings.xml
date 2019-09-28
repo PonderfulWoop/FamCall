@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">FamCall</string>
+    <string name="title_home">Home</string>
+    <string name="title_history">History</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_about">About</string>
+
+    <string name="about">Made with <font color='#e74c3c'>❤️</font>️ by Shashank Shirol.</string>
+    <string name="ver_info">FamCall v1.0.0 \n Copyright © 2019 Shashank Shirol All Rights Reserved.</string>
+
+    <string name="greet_Shashank">Welcome, Shashank! \n Whom would you like to call?</string>
+    <string name="greet_Shruti">Welcome, Shruti! \n Whom would you like to call?</string>
+    <string name="greet_Shreya">Welcome, Shreya! \n Whom would you like to call?</string>
+    <string name="greet_Shantu">Welcome, Shantu! \n Whom would you like to call?</string>
+
+    <string name="Dad">Dad</string>
+    <string name="Mom">Mom</string>
+    <string name="Shruti">Shruti</string>
+    <string name="Shashank">Shashank</string>
+    <string name="speaker">Speaker</string>
+    <string name="onCall">onCall_speaker</string>
+    <string name="end_call">End call</string>
+    <string name="person">Person</string>
+</resources>
