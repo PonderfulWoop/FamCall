@@ -11,12 +11,14 @@ import android.widget.Chronometer;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class onCallActivity extends AppCompatActivity {
 
     ImageView iv;
+    static onCallActivity callActivity;
     ImageButton ib1, ib2;
     Chronometer chronometer;
     static int counter = 0;
@@ -26,6 +28,8 @@ public class onCallActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.oncall_activity);
+
+        callActivity = this;
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         iv = findViewById(R.id.imageView5);
         tv = findViewById(R.id.textView3);
@@ -36,10 +40,13 @@ public class onCallActivity extends AppCompatActivity {
         chronometer.start();
 
         Intent i = getIntent();
-        Bundle b = i.getExtras();
-        String name = b.getString("name");
+        String name = i.getStringExtra("name");
         tv.setText(name);
         setIV(name);
+    }
+
+    public static onCallActivity getInstance(){
+        return callActivity;
     }
 
     private void setIV(String name) {
@@ -50,10 +57,10 @@ public class onCallActivity extends AppCompatActivity {
             case "Shruti":
                 iv.setImageResource(R.drawable.shruti);
                 return;
-            case "Daddy":
+            case "Dad":
                 iv.setImageResource(R.drawable.papa);
                 return;
-            case "Mommy":
+            case "Mom":
                 iv.setImageResource(R.drawable.mom);
                 return;
         }
@@ -62,11 +69,11 @@ public class onCallActivity extends AppCompatActivity {
     public void toggleSpeaker(View v){
         counter++;
         if(counter%2 != 0){
-            ib1.setBackgroundColor(Color.MAGENTA);
+            ib1.setBackgroundResource(R.drawable.button_bg);
             setVolumeControlStream(AudioManager.USE_DEFAULT_STREAM_TYPE);
         }
         else{
-            ib1.setBackgroundResource(android.R.drawable.btn_default);
+            ib1.setBackgroundResource(R.drawable.button_bg2);
             setVolumeControlStream(AudioManager.STREAM_VOICE_CALL);
         }
     }
@@ -77,5 +84,10 @@ public class onCallActivity extends AppCompatActivity {
         returnIntent.putExtra("call_time", s);
         setResult(Activity.RESULT_OK, returnIntent);
         finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        //do Nothing
     }
 }

@@ -15,11 +15,10 @@
         android:layout_marginBottom="8dp"
         android:gravity="center"
         android:lineSpacingMultiplier="0.7"
-        android:text="@string/greet_Shashank"
+        android:text="@string/greet_Shreya"
         android:textSize="25sp"
         android:fontFamily="@font/baloo"
         android:textColor="#000"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +39,6 @@
         android:scaleType="fitCenter"
         android:onClick="MakeCall"
         android:src="@drawable/papa"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,11 +56,10 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:contentDescription="@string/Mom"
+        android:contentDescription="@string/Shashank"
         android:scaleType="fitCenter"
-        android:src="@drawable/mom"
+        android:src="@drawable/shannu"
         android:onClick="MakeCall"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,15 +77,15 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:contentDescription="@string/Shashank"
+        android:contentDescription="@string/Shruti"
         android:scaleType="fitCenter"
         android:onClick="MakeCall"
-        android:src="@drawable/shannu"
-
+        android:src="@drawable/shruti"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.9"
         tools:srcCompat="@tools:sample/avatars[0]" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
