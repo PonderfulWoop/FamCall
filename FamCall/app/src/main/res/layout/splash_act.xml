@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/splash_iv"
+        android:contentDescription="@string/app_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/logo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/baloo"
+        android:layout_marginTop="40dp"
+        android:id="@+id/splash_tv1"
+        android:textSize="25sp"
+        android:lineSpacingMultiplier="0.7"
+        android:text="@string/app_name_desc"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_below="@+id/splash_iv"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/splash_tv2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="bottom"
+        android:textSize="15sp"
+        android:text="A Shashank Shirol Production."
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/splash_tv1"/>
+
+</RelativeLayout>
